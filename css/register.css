@@ -1,0 +1,19 @@
+﻿#RegTitle{width:520px;height:70px;margin:0px auto;}
+#RegTitle h1{font-size:36px;line-height:70px;text-align:center;color:#27E1CE;}
+
+#RegContent{width:520px;margin:10px auto 0px;
+	animation: fadeInUp 1s;
+	-webkit-animation: fadeInUp 1s;
+	-ms-animation: fadeInUp 1s;
+	-moz-animation: fadeInUp 1s;
+}
+#RegContent .RegTd{width:520px;height:70px;}
+#RegContent .RegTd .RegName{font-size:14px;height:30px;line-height: 30px;}
+#RegContent .RegTd .RegText{width:520px;height:35px;}
+#RegContent .RegTd .RegText input[type='text'],input[type='password']{width:520px;height:35px;border:1px solid #27E1CE;text-indent:1em;}
+#RegContent .RegTd input[type='submit']{width:120px;height:35px;margin-top:10px;cursor: pointer;background: #DF5000;color:#fff;border:2px solid #DF5000;transition: 0.3s;float:left;}
+#RegContent .RegTd input[type='submit']:hover{background: #fff;color: #DF5000;transition: 0.3s;}
+
+
+.LoginNow {float:left;line-height:35px;margin:10px 0px 0px 10px;color:rgba(0, 0, 0, 0.3);}
+.LoginNow:hover {color:#DF5000;text-decoration:underline;}

@@ -1,0 +1,159 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<!DOCTYPE html>
+<html>
+    <head runat="server">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="description" content="" />
+        <meta name="keyword" content="" />
+        <title>图书商店</title>
+        <link rel="stylesheet" type="text/css" href="css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="css/animate.css"/>
+        <link href="css/dome.css" rel="stylesheet" type="text/css" />
+        <asp:ContentPlaceHolder id="head" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </head>
+<body>
+    <form id="form1" runat="server">
+        <!--tabs-mask start-->
+        <div class="tabs-mask">
+            <div class="shoppint-mask" id="shop">
+                <b class="icon"></b>
+                <span class="tab-txt">购物车</span>
+                <b class="spp-num">0</b>
+            </div>
+            <div class="mui-mbar tab-mb">
+                <i class="iconfont"><img src="images/pp.png" alt=""/></i>
+                <div class="tab-money mbar">
+                    <div class="tab-return">我的品牌</div>
+                    <b class="b"></b>
+                </div>
+            </div> 
+            <div class="mui-mbar tab-mb">
+                <i class="iconfont"><img src="images/sc.png" alt=""/></i>
+                <div class="tab-money mbar">
+                    <div class="tab-return">我的收藏</div>
+                    <b class="b"></b>
+                </div>
+            </div>
+            <!--回到顶部 开始-->
+            <div class="mui-mbar tab-mb">
+                <div class="tabs-top" id="top" title="回到顶部" style="display:block;"></div>
+                <div class="tab-money mbar">
+                    <div class="tab-return">回到顶部</div>
+                    <b class="b"></b>
+                </div>
+            </div>
+            <!--回到顶部 结束-->
+        </div>
+        <!--tabs-mask end-->
+        <!--site-nav start-->
+        <div class="site-nav">
+	        <div class="sn-bd">
+	            <div class="sn-content">
+	                <div class="sn-left">
+	                    <p class="sn-back-home">
+	                        <i class="iconfont font">&#xe74f;</i>
+	                        <a href="index.aspx">首页</a>
+	                    </p>
+	                    <p class="login-info">
+                            <asp:Label ID="UserLabel" runat="server"></asp:Label>
+	                        <em>喵，欢迎来购物中心</em>
+                            <asp:HyperLink ID="Plogin" runat="server" CssClass="sn-login sn" NavigateUrl="Login.aspx">请登录</asp:HyperLink>
+	                        <a href="Views/register.aspx" class="sn-register sn">免费注册</a>
+	                    </p>
+	                </div>
+	                <div class="sn-right">
+	                    <ul>
+	                        <li class="j_MyTaoba menu-item">
+	                            <div  class="menu-bd">
+	                                <ul>
+	                                    <li><a href="javascript:void(0);">已买到的宝贝</a></li>
+	                                    <li><a href="javascript:void(0);">已卖出的宝贝</a></li>
+	                                </ul>
+	                            </div>
+	                        </li>
+	                        <li>
+	                            <i class="iconfont topicon" style="font-size:12px;">&#xe730;</i>
+	                            <a href="javascript:void(0);">我关注的品牌</a>
+	                        </li>
+	                        <li>
+	                            <i class="iconfont topicon" style="font-size:12px;">&#xe698;</i>
+	                            <a href="javascript:void(0);">购物车0件</a>
+	                        </li>
+	                        <li>
+                                <i class="iconfont topicon">&#xe69e;</i>
+	                            <a href="javascript:void(0);">网站留言</a>
+	                        </li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+        </div>
+        <!--site-nav end-->
+
+
+        <!--header start-->
+        <div id="header">
+            <!-- header-dome start -->
+            <div class="header-dome">
+        	    <div id="search">
+                    <div class="search-wrap">
+                        <asp:TextBox ID="SearchTxt"  runat="server" placeholder="搜索你想买的商品" ></asp:TextBox>
+	                    <asp:Button ID="SerachBtn" runat="server" Text="搜索" OnClick="SerachBtn_Click" />
+                    </div>
+                </div>    
+            </div>
+            <!-- header-dome end -->
+            <div id="nav">
+        	    <div class="nav-dome">
+        		    <asp:HyperLink ID="link1" runat="server" CssClass="link" NavigateUrl="~/Default.aspx">
+        			    <img src="images/navlcon.png" alt="" >
+        			    商城首页
+        		    </asp:HyperLink>
+	                |
+	                <asp:HyperLink ID="link2" runat="server" CssClass="link" >
+        			    <img src="images/navlcon.png" alt="" >
+                        新品上市
+	                </asp:HyperLink>
+	                |
+	                <asp:HyperLink ID="link3" runat="server" CssClass="link" NavigateUrl="javascript:void(0);">
+        			    <img src="images/navlcon.png" alt="" >
+                        精品推荐
+	                </asp:HyperLink>
+	                |
+	                <asp:HyperLink ID="link4" runat="server" CssClass="link" NavigateUrl="javascript:void(0);">
+        			    <img src="images/navlcon.png" alt="" >
+                        特价商品
+	                </asp:HyperLink>
+	                |
+	                <asp:HyperLink ID="link5" runat="server" CssClass="link" NavigateUrl="javascript:void(0);">
+        			    <img src="images/navlcon.png" alt="" >
+                        热销商品
+	                </asp:HyperLink>
+        	    </div>
+            </div>
+            
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                
+            </asp:ContentPlaceHolder>
+
+        </div>
+        <!--header end-->
+
+        
+        <!--footer start-->
+        <div class="footer">
+            
+            <div class="tmall-copyright">
+                <div class="footer-copyright  footercon">
+                    &copy;2016 - facekeke.com 版权所有
+                </div>
+            </div>
+        </div>
+        <!--footer end-->
+        
+    </form>
+    
+</body>
+</html>
